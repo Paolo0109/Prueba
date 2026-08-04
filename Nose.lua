@@ -600,7 +600,7 @@ end)
 local autoFarmEnabled = false
 local autoResetEnabled = false
 local antiAfkEnabled = false
-local farmSpeed = 27.85
+local farmSpeed = 28.05
 
 local roundInService = false
 local resetting = false
@@ -944,6 +944,8 @@ end)
 TabAutoFarm:CreateToggle("Farm_ResetFull", "Auto Reset", function(state)
     autoResetEnabled = state
 end)
+
+TabAutoFarm:CreateParagraph("⚠️ WARNING", "It is recommended to keep the farm speed at default or slightly lower. Going too fast will trigger invalid position detection and disconnect you frequently.")
 
 TabAutoFarm:CreateSlider("Farm_Speed", "Farm Speed", 15, 35, function(value)
     farmSpeed = value
